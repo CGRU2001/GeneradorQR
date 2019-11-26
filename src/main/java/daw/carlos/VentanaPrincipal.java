@@ -20,8 +20,17 @@ public class VentanaPrincipal extends JFrame{
     public static final int ANCHO_FRAME = 600;     
     public static final int ALTO_FRAME = 200;
     
+    //Atributo. Cuando un objeto de la clase está contenido como atributo
+    //de otra se conoce como composición
+    
+    private Panel panel;
+    
+    //Constructor
     public VentanaPrincipal(){
         crearVentana();
+        panel = new Panel();
+        //Añade el panel a la ventana
+        this.add(panel);
     }
     private void crearVentana(){
         
