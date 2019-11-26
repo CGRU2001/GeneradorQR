@@ -5,6 +5,8 @@
  */
 package daw.carlos;
 
+import java.awt.Color;
+import java.awt.FlowLayout;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -22,4 +24,14 @@ public class Panel extends JPanel{
     private JLabel labelURL, labelFichero;
     private JTextArea txtURL, txtFichero;
     private JButton buttonGenerar, buttonCerrar;
+    
+    public Panel(){
+        //Establece el layout del panel
+        //Forma de desponer los elementos internamente
+        this.setLayout(new FlowLayout());
+        //Establecemos color de fondo al panel
+        this.setBackground(Color.red);
+        //Tamaño del panel
+        this.setSize(ANCHO_FRAME, ALTO_FRAME);
+    }
 }
