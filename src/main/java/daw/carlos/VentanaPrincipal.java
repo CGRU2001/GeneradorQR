@@ -27,7 +27,7 @@ public class VentanaPrincipal extends JFrame{
         
         //Posición y tamaño de la ventana
         
-        this.setBounds(600, 150, ANCHO_FRAME, ALTO_FRAME);
+        this.setBounds(400, 250, ANCHO_FRAME, ALTO_FRAME);
         
         //Títutlo de la ventana
         

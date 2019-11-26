@@ -11,6 +11,9 @@ package daw.carlos;
  */
 public class Programa {
     public static void main(String[] args) {
+        //Instanciamos la ventana
+        VentanaPrincipal ventana = new VentanaPrincipal();
+        System.out.println("Venana Generada");
         
     }
 }
