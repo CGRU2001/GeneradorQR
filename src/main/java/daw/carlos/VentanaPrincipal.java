@@ -16,4 +16,5 @@ import javax.swing.JFrame;
 //Los atributos y métodos de JFrame
 public class VentanaPrincipal extends JFrame{
     
+    
 }
