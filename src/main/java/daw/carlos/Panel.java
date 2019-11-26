@@ -5,7 +5,10 @@
  */
 package daw.carlos;
 
+import javax.swing.JButton;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JTextArea;
 /**
  *
  * @author carlos-pc
@@ -14,4 +17,9 @@ public class Panel extends JPanel{
     //Ajustamos las constantes del tamaño del panel
     public static final int ANCHO_FRAME = 600;     
     public static final int ALTO_FRAME = 200;
+    
+    //Atributos del panel
+    private JLabel labelURL, labelFichero;
+    private JTextArea txtURL, txtFichero;
+    private JButton buttonGenerar, buttonCerrar;
 }
