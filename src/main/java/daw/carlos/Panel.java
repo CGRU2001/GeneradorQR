@@ -30,7 +30,7 @@ public class Panel extends JPanel{
         //Forma de desponer los elementos internamente
         this.setLayout(new FlowLayout());
         //Establecemos color de fondo al panel
-        this.setBackground(Color.red);
+        this.setBackground(Color.gray);
         //Tamaño del panel
         this.setSize(ANCHO_FRAME, ALTO_FRAME);
     }
