@@ -7,8 +7,11 @@ package daw.carlos;
 
 import java.awt.Color;
 import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 /**
@@ -58,10 +61,42 @@ public class Panel extends JPanel{
         
         buttonGenerar = new JButton("Generar QR");
         this.add(buttonGenerar);
+        //Le damos comportamiento al botón general
+        buttonGenerar.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent arg0) {
+                //Si algún campo está vacío, se cumple esta condición
+                if(txtURL.getText().isEmpty() || txtFichero.getText().isEmpty()){
+                    if(txtURL.getText().isEmpty() && !(txtFichero.getText().isEmpty())){
+                        JOptionPane.showMessageDialog(null, "Has dejado el campo 'URL o texto' vacío");
+                    }else if(txtFichero.getText().isEmpty() && !(txtURL.getText().isEmpty() )){
+                        JOptionPane.showMessageDialog(null, "Has dejado el campo 'fichero' vacío");
+                    }
+                    else{
+                        JOptionPane.showMessageDialog(null, "Has dejado todos los campos vacíos");
+                    }
+                    
+                }
+                else{
+                    //Código que genera el QR
+                }
+            }
+        });
         
         //Creamos el botón "Cerrar"
         
         buttonCerrar = new JButton("Cerrar");
         this.add(buttonCerrar);
+        //Le damos comportamiento al botón cerrar
+        //Usamos una clase interna anónima
+        //Interna al método ActionListener
+        //Anónima porque no tiene identificador
+        buttonCerrar.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent ae) {
+                System.exit(0);
+            }
+        });
+        
     }
 }
