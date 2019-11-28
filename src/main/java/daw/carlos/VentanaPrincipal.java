@@ -17,7 +17,7 @@ import javax.swing.JFrame;
 public class VentanaPrincipal extends JFrame{
     
     //Tamaño de la ventana . Constantes
-    public static final int ANCHO_FRAME = 600;     
+    public static final int ANCHO_FRAME = 600;
     public static final int ALTO_FRAME = 200;
     
     //Atributo. Cuando un objeto de la clase está contenido como atributo
@@ -31,6 +31,8 @@ public class VentanaPrincipal extends JFrame{
         panel = new Panel();
         //Añade el panel a la ventana
         this.add(panel);
+        //Hacemos visible la ventana
+        this.setVisible(true);
     }
     private void crearVentana(){
         
@@ -45,7 +47,6 @@ public class VentanaPrincipal extends JFrame{
         this.setResizable(false);
         //Cerrar programa al pulsar
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
-        //Hacemos visible la ventana
-        this.setVisible(true);
+
     }
 }
