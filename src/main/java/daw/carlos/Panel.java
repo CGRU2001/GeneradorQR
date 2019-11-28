@@ -10,7 +10,7 @@ import java.awt.FlowLayout;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.JTextArea;
+import javax.swing.JTextField;
 /**
  *
  * @author carlos-pc
@@ -22,7 +22,7 @@ public class Panel extends JPanel{
     
     //Atributos del panel
     private JLabel labelURL, labelFichero;
-    private JTextArea txtURL, txtFichero;
+    private JTextField txtURL, txtFichero;
     private JButton buttonGenerar, buttonCerrar;
     
     public Panel(){
@@ -39,5 +39,29 @@ public class Panel extends JPanel{
         //Añade la etiqueta para introducir la URL
         this.labelURL = new JLabel("Introduce la URL o el texto:");
         this.add(labelURL);
+        
+        //Añade el campo de texto para poner la URL del vídeo
+        this.txtURL = new JTextField(25);
+        this.add(txtURL);
+        
+        //Añade la etiqueta para indicar el nombre del fichero
+        labelFichero = new JLabel("Indica el nombre del fichero: ");
+        this.add(labelFichero);
+        
+        //Añade el campo de texto para poner el fichero
+        this.txtFichero = new JTextField(25);
+        this.add(txtFichero);
+        
+        //Generamos los botones
+        
+        //Generamos el botón "Generar"
+        
+        buttonGenerar = new JButton("Generar QR");
+        this.add(buttonGenerar);
+        
+        //Creamos el botón "Cerrar"
+        
+        buttonCerrar = new JButton("Cerrar");
+        this.add(buttonCerrar);
     }
 }
