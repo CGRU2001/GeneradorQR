@@ -33,11 +33,12 @@ public class Panel extends JPanel{
         //Forma de desponer los elementos internamente
         this.setLayout(new FlowLayout());
         //Establecemos color de fondo al panel
-        this.setBackground(Color.gray);
+        this.setBackground(Color.lightGray);
         //Tamaño del panel
         this.setSize(ANCHO_FRAME, ALTO_FRAME);
         inicializarComponentes();
     }
+    
     private void inicializarComponentes(){
         //Añade la etiqueta para introducir la URL
         this.labelURL = new JLabel("Introduce la URL o el texto:");
