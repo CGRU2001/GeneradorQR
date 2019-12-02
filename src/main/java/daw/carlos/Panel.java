@@ -14,7 +14,8 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
-/**
+
+/*
  *
  * @author carlos-pc
  */
@@ -37,6 +38,7 @@ public class Panel extends JPanel{
         //Tamaño del panel
         this.setSize(ANCHO_FRAME, ALTO_FRAME);
         inicializarComponentes();
+        
     }
     
     private void inicializarComponentes(){
@@ -81,6 +83,7 @@ public class Panel extends JPanel{
                 else{
                     //Código que genera el QR
                     QR.escribirQR(txtURL.getText(), txtFichero.getText(), "png");
+                    new VentanaResultado(txtFichero.getText());
                 }
             }
         });

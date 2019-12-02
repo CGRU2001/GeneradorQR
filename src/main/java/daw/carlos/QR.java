@@ -47,7 +47,6 @@ public class QR {
             matrizPuntos = qrcw.encode(texto, BarcodeFormat.QR_CODE, ANCHO_QR, ALTO_QR);
             ficheroSalida = new FileOutputStream(new File(fichero));
             MatrixToImageWriter.writeToStream(matrizPuntos, "png", ficheroSalida);
-            JOptionPane.showMessageDialog(null, "Se ha generado la imagen " + fichero);
         } catch (WriterException ex) {
             JOptionPane.showMessageDialog(null, "El contenido no pudo ser codificado");
         } catch (FileNotFoundException ex) {

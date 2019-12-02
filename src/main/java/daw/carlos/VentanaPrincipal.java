@@ -28,9 +28,11 @@ public class VentanaPrincipal extends JFrame{
     //Constructor
     public VentanaPrincipal(){
         crearVentana();
+        
         panel = new Panel();
         //Añade el panel a la ventana
         this.add(panel);
+
         //Hacemos visible la ventana
         this.setVisible(true);
     }
