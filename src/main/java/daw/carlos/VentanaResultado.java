@@ -7,6 +7,7 @@ package daw.carlos;
 
 import java.awt.Dimension;
 import java.awt.Toolkit;
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
@@ -27,5 +28,15 @@ public class VentanaResultado extends JFrame{
         Dimension tamanio = Toolkit.getDefaultToolkit().getScreenSize();
         //Establecemos posición y tamaño de la ventana
         this.setBounds(tamanio.width/2 - QR.ANCHO_QR/2, tamanio.height/2  - QR.ALTO_QR/2, QR.ANCHO_QR, QR.ALTO_QR);
+        resultado = new JLabel();
+        //Objeto imageIcon para cargar imágenes en el JLabel
+        ImageIcon imagen = new ImageIcon(fichero);
+        resultado.setIcon(imagen);
+        //Añade el JLabel a la ventana
+        this.add(resultado);
+        //Ventana ajusta el tamaño al tamaño de lo que contenga
+        this.pack();
+        //Ventana a mostrar
+        this.setVisible(true);
     }
 }
